@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es-en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-top: 30px;
+      color: #3465a4;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .box {
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #3465a4;
+    }
+
+    .form .text-input-entrada {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #d9d9d9;
+      margin-bottom: 20px;
+    }
+
+    .form .btn-encriptar,
+    .form .btn-desencriptar {
+      background-color: #3465a4;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .form .btn-desencriptar {
+      background-color: #dc143c;
+    }
+
+    .msg .titulo-msg {
+      color: #3465a4;
+      margin-bottom: 10px;
+    }
+
+    .msg .text-input-salida {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #d9d9d9;
+      margin-bottom: 10px;
+      resize: none;
+      height: 150px;
+    }
+
+    .msg .btn-copy {
+      background-color: #3465a4;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .msg .btn-copy:hover {
+      background-color: #2e5a8b;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .box {
+        width: 90%;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .msg .text-input-salida {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="titulo">Encriptador</h1>
+
+  <main class="main">
+    <section class="form box">
+      <form action="">
+        <label for="input-texto">Solo letras minúsculas, sin acento</label>
+        <input class="text-input-entrada" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+        <input class="btn-encriptar" type="button" value="encriptar" id="btn-encriptar">
+        <input class="btn-desencriptar" type="button" value="desencriptar" id="btn-desencriptar">
+      </form>
+    </section>
+  
+    <section class="msg box">
+      <h2 class="titulo-msg">Mensaje encriptado:</h2>
+      <input class="text-input-salida" type="text" id="msg">
+      <input class="btn-copy" type="button" value="copiar" id="btn-copy">
+    </section>
+  </main>
+
+  <script src="scriptprogramadorfinal"></script>
